@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Better Kick",
+  "author": "Kaosc",
   "version": "0.1.0",
   "permissions": [],
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "https://*.kick.com/*"
       ],
       "js": [
         "content.js"

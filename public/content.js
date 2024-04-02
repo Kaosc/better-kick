@@ -4,6 +4,7 @@ window.onload = () => {
 		if (elementToRemove) {
 			elementToRemove.remove()
 		}
+
 		var showMoreButton = document.getElementsByClassName("show-action-btn-label")[0]
 		if (showMoreButton) {
 			showMoreButton.click()
