@@ -1,13 +1,22 @@
 window.onload = () => {
 	setTimeout(() => {
-		var elementToRemove = document.getElementsByClassName("section-title")[1]?.parentElement
+		var elementToRemove = document.evaluate('//*[@id="sidebar-wrapper"]/div[2]/div/section[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+		var showMoreButton = document.evaluate('//*[@id="sidebar-wrapper"]/div[2]/div/div[2]/button', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+		// var showMoreChannelsButton = document.evaluate('//*[@id="sidebar-wrapper"]/div[2]/div/div[1]/button', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
 		if (elementToRemove) {
-			elementToRemove.remove()
+			elementToRemove.remove();
 		}
 
-		var showMoreButton = document.getElementsByClassName("show-action-btn-label")[0]
 		if (showMoreButton) {
-			showMoreButton.click()
+			showMoreButton.remove();
 		}
-	}, 500)
+
+		// if (showMoreChannelsButton) {
+		// 	// click
+		// 	showMoreChannelsButton.click();
+		// }
+	}, 1000);
 }
